@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroVault - Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">ElectroVault</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h2 class="section-title" style="text-align: center;">Checkout Details</h2>
+    <form action="#" method="POST" class="checkout-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Street Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="123 Main St, Apt 4B" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="New York" required>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode / Postal Code</label>
+        <input type="text" id="pincode" name="pincode" placeholder="10001" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-1234" required>
+      </div>
+      <div class="form-group">
+        <label>Payment Method</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="payment" value="card" checked> Credit / Debit Card
+          </label>
+          <label>
+            <input type="radio" name="payment" value="cod"> Cash on Delivery
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Contact: support@electrovault.com</p>
+    <p>&copy; 2026 ElectroVault Inc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
