@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plain JavaScript Client for Task Manager REST API (Lab 6)">
+  <title>Task Manager - Plain JS Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="badge">Lab 6 - Plain JS Client</div>
+      <h1>Task Manager API Client</h1>
+      <p class="subtitle">Consuming Node.js + Express REST API via native fetch()</p>
+    </header>
+
+    <main class="content-card">
+      <div class="card-header">
+        <h2>Task Overview</h2>
+        <button id="refresh-btn" class="btn-refresh">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          Reload
+        </button>
+      </div>
+
+      <!-- State Containers -->
+      <div id="loading-state" class="state-container loading-box hidden">
+        <div class="spinner"></div>
+        <span>Loading tasks from http://localhost:5000/api/tasks...</span>
+      </div>
+
+      <div id="error-state" class="state-container error-box hidden">
+        <div class="error-icon">⚠️</div>
+        <div class="error-details">
+          <h3>Failed to connect to API</h3>
+          <p id="error-message">Unable to reach Express REST API server.</p>
+        </div>
+      </div>
+
+      <ul id="task-list" class="task-list hidden"></ul>
+    </main>
+
+    <footer class="footer">
+      <p>Tested with Server Down resilience handling (Q3c)</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
